@@ -2,12 +2,14 @@
 <body>
 <form method="post">
     <input type="text" name="name" placeholder="New name">
+    <input type="hidden" name="_csrf" value="{{_csrf.token}}">
     <button type="submit">Submit</button>
     <button type="reset">Reset</button>
 </form>
 <div>{{name}}</div>
+<form action="/logout" method="post">
+    <input type="submit" value="Sign Out"/>
+</form>
 
 </body>
-
-
 </html>

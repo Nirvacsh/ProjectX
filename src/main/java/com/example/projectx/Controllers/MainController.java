@@ -18,7 +18,7 @@ public class MainController {
     @PostMapping
     public String add(@RequestParam String name, Map<String, Object> model) {
         DocxContext content = new DocxContext(name);
-       
+
         return "main";
     }
 }
